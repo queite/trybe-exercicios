@@ -1,0 +1,27 @@
+div:hover {
+    border: 3px solid olive;
+}
+div:nth-of-type(1) {
+    background-color: rosybrown;
+    color:darkslategray;
+}
+div:nth-of-type(2) {
+    background-color:yellowgreen;
+    color:lightcoral;
+}
+div:nth-of-type(3) {
+    background-color: rebeccapurple;
+    padding: 5px;
+    color:lightgray;
+}
+div:nth-of-type(4) {
+    background-color:blue;
+    color:snow;
+}
+div:nth-of-type(5) {
+    background-color:burlywood;
+    color:maroon;
+}
+div:nth-of-type(odd) {
+    font-style: italic;
+}
