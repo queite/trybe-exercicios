@@ -12,5 +12,9 @@ nav ul li {
 }
 a {
     text-decoration: none;
-    color: darkred;
+    color:darkcyan;
+}
+td {
+    border: 1px darkblue solid;
+    opacity: 45%;
 }
