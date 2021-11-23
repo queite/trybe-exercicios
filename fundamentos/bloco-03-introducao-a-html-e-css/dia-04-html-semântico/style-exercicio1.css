@@ -1,20 +1,35 @@
-h1 {
-    text-align: center;
-    color: darkblue;
+body {
+  background-color: #94c2ff;
+  position: relative;
+}
+header {
+  text-align: center;
+  color: #2c4a73;
 }
 nav {
-    align-items: center;
+  background-color: rgb(92, 135, 192);
+  padding: 15px;
+  font-size: 20px;
 }
 nav ul li {
-    display: inline;
-    margin-right: 10%;
-    font-weight: 700;
+  display: inline;
+  margin-right: 10%;
+  font-weight: 700;
 }
 a {
-    text-decoration: none;
-    color:darkcyan;
+  text-decoration: none;
+  color: #735620;
 }
 td {
-    border: 1px darkblue solid;
-    opacity: 45%;
+  border: 1px darkblue solid;
+  opacity: 45%;
+}
+article {
+  width: 80%;
+}
+aside {
+  float: right;
+  width: 20%;
+  background-color: rgb(92, 135, 192);
+  height: 100%;
 }
