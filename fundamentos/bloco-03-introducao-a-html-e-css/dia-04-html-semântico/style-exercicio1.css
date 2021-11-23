@@ -1,5 +1,5 @@
 body {
-  background-color: #94c2ff;
+  background-color:azure;
   position: relative;
 }
 header {
@@ -18,18 +18,29 @@ nav ul li {
 }
 a {
   text-decoration: none;
-  color: #735620;
+  color:black;
 }
 td {
   border: 1px darkblue solid;
-  opacity: 45%;
+  opacity: 75%;
 }
 article {
   width: 80%;
 }
+/* .teste {
+    display: inline-block;
+}
+.table-vision {
+    width: 50%;
+} */
 aside {
-  float: right;
-  width: 20%;
-  background-color: rgb(92, 135, 192);
-  height: 100%;
+    float: right;
+    width: 20%;
+    background-color: rgb(92, 135, 192);
+  }
+footer {
+  text-align: right;
+  background-color:rgb(92, 135, 192) ;
+  padding: 10px;
+  color:black;
 }
