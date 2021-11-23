@@ -2,3 +2,15 @@ h1 {
     text-align: center;
     color: darkblue;
 }
+nav {
+    align-items: center;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10%;
+    font-weight: 700;
+}
+a {
+    text-decoration: none;
+    color: darkred;
+}
