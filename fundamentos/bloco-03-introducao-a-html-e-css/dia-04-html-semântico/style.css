@@ -1,0 +1,41 @@
+
+h1, h3 {
+    text-align: center;
+  }
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    align-content: center;
+    margin:auto;
+    list-style-type: none;
+  }
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;  
+    /* margin-left: 300px; */
+  }
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+  }
+  ul.premiaçao {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+  }
+  .second, .third {
+      display: inline-flex;
+      justify-content: center;
+  }
+  section {
+    text-align: center;
+  }
