@@ -24,15 +24,17 @@ td {
   border: 1px darkblue solid;
   opacity: 75%;
 }
-article {
+.article {
   width: 80%;
 }
-/* .teste {
+/* .container {
     display: inline-block;
-}
-.table-vision {
-    width: 50%;
 } */
+.table-vision {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
 aside {
     float: right;
     width: 20%;
@@ -43,4 +45,7 @@ footer {
   background-color:rgb(92, 135, 192) ;
   padding: 10px;
   color:black;
+}
+table {
+  display: inline-block;
 }
