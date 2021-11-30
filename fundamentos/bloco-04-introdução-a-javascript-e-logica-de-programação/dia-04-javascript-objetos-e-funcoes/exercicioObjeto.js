@@ -16,4 +16,6 @@ console.log('A jogadora ' + player.name + ' ' + player.lastName + ' foi eleita a
 
 console.log(Object.keys(player.bestInTheWorld).lenght);
 
+console.log('\n');
+
 console.log('A jogadora possui ' + player.medals.golden + ' meldalhas de ouro e ' + player.medals.silver + ' de prata.');
