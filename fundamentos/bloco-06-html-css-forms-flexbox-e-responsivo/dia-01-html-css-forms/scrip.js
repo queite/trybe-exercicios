@@ -105,7 +105,7 @@ function dateValidation(input){// vem da função validateInput que a chama pelo
 }
 
 // Validando inputs (required e max-length)
-function defaultValidation(input, name){
+function defaultValidation(input, name){// As funções de validação são chamadas pela função validateInput que dá os parâmetros e decide qual a validação correta com a ajuda do objeto validationStrategies
   let trimmed = input.value.trim();
   let validation = inputs[name];
 
@@ -125,9 +125,9 @@ function getSelectedOption(select){// Função auxiliar da validação do select
   return select.options[select.selectedIndex];// pega o option selecionado entre os options do select. The selectedIndex property sets or returns the index of the selected option in a drop-down list.
 }
 
-function selectValidation(select, name){//Qdo é chamada e de onde vem parâmetro?
+function selectValidation(select, name){// As funções de validação são chamadas pela função validateInput que dá os parâmetros e decide qual a validação correta com a ajuda do objeto validationStrategies
   let option = getSelectedOption(select);// Chama a função auxiliar que retorna apenas a opção selecionada. Não fez mto sentido criar uma função extra com apenas uma linha para isso. Não daria para usar select.options[select.selectedIndex] direto aqui? Testar depois.
-  let validation = inputs[name];// armazena o name do objeto inputs inputs
+  let validation = inputs[name];// armazena o name do objeto inputs
 
 
   if(validation.required && (!option || option.disabled)){// se a chave(name) em inputs tiver a chave required retorna verdadeiro e se não tiver option(ou seja, option for undefined=falsy) ou se a drop-down list está desativada .disabled tbm retorna falso. Resumo: se a chave do objeto inputs tiver a chave required e não tiver opcão marcada ou estiver desativada retorna falso. (trabalhando com truthy e falsy
@@ -157,8 +157,7 @@ let validationStrategies = {
 }
 
 // Verifica as chaves do objeto inputs (conforme parâmetro) e direciona para o objeto inputs validationStrategies que aponta para a função de validação cfe o type
-
-function validateInput(inputName){// É chamada na funcção validateData e recebe como parâmetro o nome das variáveis do objeto inputs por meio de um for.
+function validateInput(inputName){// É chamada na função validateData e recebe como parâmetro o nome das variáveis do objeto inputs por meio de um for.
   let inputType = inputs[inputName].type;// pega o type do objeto inputs
   let input = document.querySelector(`[name=${inputName}]`);//pega o name do input no html que seja igual ao parâmetro da função
 
@@ -303,7 +302,7 @@ function handleSubmit(event) {
   } else {
     validation.messages.unshift('Dados Inválidos')//unshift() adiciona ao início do array a mensagem Dados inválidos. Ou seja, será a primeira linha do array messages que foi armazenado no objeto inputs retornado pela função validateData()
 
-    renderErrorMessages(validation.messages)// provavelmente renderiza as mensagem (manda para tela). Descobrir relação entre validation(resultado da funçãO validateData() e messages (é criada em validateData())
+    renderErrorMessages(validation.messages)
   }
 }
 
