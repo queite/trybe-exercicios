@@ -40,25 +40,30 @@ const professionalBoard = [
 
 // Pesquisa
 const searchEmployee = (id, detail) => {
-  const information = {};
-  for (i in professionalBoard) {
-    if (id === professionalBoard[i].id) {
-      information.id = professionalBoard[i].id;
-      information[detail] = professionalBoard[i][detail];
+  try{
+    const information = {};
+    for (i in professionalBoard) {
+      if (id === professionalBoard[i].id) {
+        information.id = professionalBoard[i].id;
+        information[detail] = professionalBoard[i][detail];
+      }
     }
+  
+    if (!information.id) {
+      throw new Error('ID não identificada')
+    }
+    if (!information[detail]) {
+      throw new Error('Informação indisponível')
+    }
+  
+    return information;
+  } catch(e) {
+    throw e.message;
   }
-
-  if (!information.id) {
-    throw new Error('ID não identificada')
-  }
-  if (!information[detail]) {
-    throw new Error('Informação indisponível')
-  }
-
-  return information;
+  
 };
 
 
-console.log(searchEmployee('4678-2', 'lastName'));
+// console.log(searchEmployee('4678-2', 'astName'));
 
 module.exports = searchEmployee;
