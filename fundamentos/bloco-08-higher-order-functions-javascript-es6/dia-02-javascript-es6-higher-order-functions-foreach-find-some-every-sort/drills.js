@@ -53,4 +53,41 @@ function findMusic(id) {
   return founded.title;
 }
 
-console.log(findMusic('31031685'))
+console.log(findMusic('31031685'));
+
+// Drills some and every
+const names2 = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+  return arr.some(item => item === name);
+}
+
+console.log(hasName(names2, 'Ala'));
+
+
+const people = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+const verifyAges = (arr, minimumAge) => {
+  return arr.every(item => item.age >= minimumAge);
+}
+
+console.log(verifyAges(people, 16));
+
+// Drill sort
+const people1 = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+people1.sort((a, b) => b.age - a.age); // a-b = crescente / b-a = descrescente
+
+console.log(people1);
