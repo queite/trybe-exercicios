@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario-curriculo</title>
-  <!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -45,17 +45,19 @@
             </select>
           </div>
           <div class="line-content">
-            <label for="houseType">Tipo de imóvel: </label>
-            <input type="radio" name="houseType" id="house" value="house" required>
-            <span>Casa</span>
-            <input type="radio" name="houseType" id="apartment" value="apartment" required>
-            <span>Apartamento</span>
+            <fieldset>
+              <legend>Tipo de imóvel</legend>
+              <input type="radio" name="houseType" id="house" value="house" required>
+              <span>Casa</span>
+              <input type="radio" name="houseType" id="apartment" value="apartment" required>
+              <span>Apartamento</span>
+            </fieldset>
           </div>
         </fieldset>
         <fieldset>
           <div class="line-content">
             <label for="resume">Resumo do currículo: </label>
-            <textarea id="resume" name="resume" maxlength="1000" cols="100" rows="20" required></textarea>
+            <textarea id="resume" name="resume" maxlength="1000" rows="20" required></textarea>
           </div>
           <div class="line-content">
             <label for="role">Cargo: </label>
@@ -70,8 +72,10 @@
             <input type="text" class="input-data" name="startDate" value="" required>
           </div>
         </fieldset>
-        <button class="submit-button" type="submit">Enviar</button>
-        <button class="clear-button" type="button">Limpar</button>
+        <div class="button">
+          <button class="submit-button" type="submit">Enviar</button>
+          <button class="clear-button" type="button">Limpar</button>
+        </div>
       </div>
     </form>
   </main>
