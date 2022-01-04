@@ -67,5 +67,5 @@ const gameActions = {
 };
 gameActions.warriorTurn(warriorDamage);
 gameActions.mageTurn(mageAction);
-gameActions.dragonTurn(dragonDamage)
+gameActions.dragonTurn(dragonDamage);
 console.log(gameActions.showResults());
