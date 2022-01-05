@@ -12,74 +12,79 @@
   <script src="./bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </head>
 
-<body class="me-3">
+<body class="form-header text-center">
   <header class="form-header">
     <h1 class="display-3">Formulário para cadastro de currículo</h1>
-    <p>Preencha os campos abaixo.</p>
+    <p class="lead">Preencha os campos abaixo.</p>
   </header>
 
   <main>
     <form id="cv-form">
       <div class="form-row">
         <fieldset>
-          <div class="line-content input-group mb-3">
+          <div class="container input-group mb-3">
             <label class="input-group-text" for="name">Nome: </label>
-            <input class="input-group mb-3" type="text" name="name" id="name" maxlength="40" required>
+            <input class="form-control" type="text" name="name" id="name" maxlength="40" required>
           </div>
-          <div class="line-content input-group mb-3">
+          <div class="container input-group mb-3">
             <label class="input-group-text" for="email">E-mail: </label>
-            <input class="email-input" type="email" name="email" id="email" maxlength="50" required>
+            <input class="form-control" type="email" name="email" id="email" maxlength="50" required>
           </div>
-          <div class="line-content input-group mb-3">
+          <div class="container input-group mb-3">
             <label class="input-group-text" for="cpf-number">CPF: </label>
-            <input type="text" name="cpf" id="cpf" maxlength="11" required>
+            <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" required>
           </div>
-          <div class="line-content input-group mb-3">
+          <div class="container input-group mb-3">
             <label class="input-group-text" for="address">Endereço: </label>
-            <input type="text" name="address" id="address" maxlength="200" required>
+            <input class="form-control" type="text" name="address" id="address" maxlength="200" required>
           </div>
-          <div class="line-content input-group mb-3">
+          <div class="container input-group mb-3">
             <label class="input-group-text" for="city">Cidade: </label>
-            <input type="text" name="city" id="city" maxlength="200" required>
+            <input class="form-control" type="text" name="city" id="city" maxlength="200" required>
           </div>
-          <div class="line-content input-group mb-3">
+          <div class="container input-group mb-3">
             <label class="input-group-text" for="state">Estado: </label>
             <select class="form-select" name="state" id="state" required>
               <option disabled selected value>Selecione seu estado</option>
             </select>
           </div class="form-check">
-          <div id="radio-group">
-            <label class="input-group-text" for="houseType">Tipo de imóvel:</label>
-            <input class="form-check-input" type="radio" name="houseType" id="house" value="house" required>
-            <span>Casa</span>
-            <input class="form-check-input" type="radio" name="houseType" id="apartment" value="apartment" required>
-            <span>Apartamento</span>
-          </div>          
+          <div id="radio-group" class="container">
+            <label class="input-group-text">Tipo de imóvel: </label>
+            <div class="form-check input-group mb-3">
+              <input class="form-check-input" type="radio" name="houseType" id="house" value="house" required>
+              <label class="form-check-label">Casa</label>
+            </div>
+            <div class="form-check input-group mb-3">
+              <input class="form-check-input" type="radio" name="houseType" id="apartment" value="apartment" required>
+              <label class="form-check-label" for="apartment">Apartamento</label>
+            </div>
+          </div>
       </div>
       </fieldset>
       <fieldset>
-        <div class="line-content input-group mb-3">
+        <div class="container input-group mb-3">
           <label class="input-group-text" for="resume">Resumo do currículo: </label>
-          <textarea id="resume" name="resume" maxlength="1000" cols="80" rows="20" required></textarea>
+          <textarea class="form-control" id="resume" name="resume" maxlength="1000" cols="80" rows="20"
+            required></textarea>
         </div>
-        <div class="line-content input-group mb-3">
+        <div class="container input-group mb-3">
           <label class="input-group-text" for="role">Cargo: </label>
-          <input type="text" name="role" id="role" maxlength="40" required>
+          <input class="form-control" type="text" name="role" id="role" maxlength="40" required>
         </div>
-        <div class="line-content input-group mb-3">
+        <div class="container input-group mb-3">
           <label class="input-group-text" for="roleDescription">Descrição do cargo: </label>
-          <input type="text" id="roleDescription" maxlength="500" name="roleDescription" required>
+          <input class="form-control" type="text" id="roleDescription" maxlength="500" name="roleDescription" required>
         </div>
-        <div class="line-content input-group mb-3">
+        <div class="container input-group mb-3">
           <label class="input-group-text" for="startDate">Data de início: </label>
-          <input type="text" class="input-data" name="startDate" value="" id="datepicker" required>
+          <input class="form-control" type="text" class="input-data" name="startDate" value="" id="datepicker" required>
         </div>
       </fieldset>
       <div>
-        <button class="submit-button btn btn-dark btn-lg" type="submit">Enviar</button>
+        <button class="submit-button btn btn-success btn-lg" type="submit">Enviar</button>
         <button class="clear-button btn btn-secondary btn-lg" id="clear" type="button">Limpar</button>
       </div>
-      
+
       </div>
     </form>
   </main>
