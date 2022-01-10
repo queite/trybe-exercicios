@@ -22,6 +22,7 @@ function clear() {
   textarea.value = '';
 }
 
+
 window.onload = function() {
   createStateOptions();
 
@@ -114,5 +115,4 @@ window.onload = function() {
     errorMessage: 'Data obrigatória',
   }
   ]);
-
 }

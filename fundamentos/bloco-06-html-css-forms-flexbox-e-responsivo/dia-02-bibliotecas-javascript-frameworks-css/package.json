@@ -1,7 +1,6 @@
 {
   "name": "dia-02-bibliotecas-javascript-frameworks-css",
   "version": "1.0.0",
-  "description": "",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "just-validate": "^2.0.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
