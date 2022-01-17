@@ -45,7 +45,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-6: _[Projeto - Arte com Pixels](https://github.com/queite/queite.github.io/tree/main/LearningProjects/PixelsArtProject)_
 - [x] 5-7: _Projeto - Lista de tarefas_
 - [x] 5-7: _Projeto - Adivinhe a Cor_
-- [x] 5-7: _Projeto - Carta Misteriosa]_
+- [x] 5-7: _Projeto - Carta Misteriosa_
 
 ##### Bloco 6: HTML & CSS avançado
 
