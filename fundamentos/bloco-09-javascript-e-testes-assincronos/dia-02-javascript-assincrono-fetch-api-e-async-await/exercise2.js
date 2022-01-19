@@ -18,7 +18,7 @@ const fetchCoin = () => {
 };
 
 // Retorna objeto com taxas de câmbio (currency-api)
-const fecthRates = async () => { // async/await usado doretamente no fetch
+const fecthRates = async () => { // async/await usado diretamente no fetch, mas teve que ser usado novamente lá embaixo. Por quê?
   const rates = await fetch(rateUrl)
   .then(response => response.json())
   .then(data => data.usd)
