@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(42, 117, 187);
+  color: rgb(255, 203, 5);
+  text-align: center;
+  margin: 3%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}

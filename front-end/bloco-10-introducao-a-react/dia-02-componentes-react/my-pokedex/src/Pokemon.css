@@ -1,0 +1,19 @@
+.pokemon-container {
+  border: 1px rgb(59, 76, 202) solid;
+  border-radius: 10px;
+  display: flex;
+  margin: 1%;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 0;
+  min-width: 25%;
+  flex-wrap: wrap;
+}
+
+.pokemon-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(199, 160, 8);
+  font-weight: 700;
+}
