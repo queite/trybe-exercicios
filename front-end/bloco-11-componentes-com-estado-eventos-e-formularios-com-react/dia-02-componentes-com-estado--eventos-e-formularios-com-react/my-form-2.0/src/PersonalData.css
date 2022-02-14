@@ -1,0 +1,8 @@
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea, select, option {
+  margin: 3px;
+}
