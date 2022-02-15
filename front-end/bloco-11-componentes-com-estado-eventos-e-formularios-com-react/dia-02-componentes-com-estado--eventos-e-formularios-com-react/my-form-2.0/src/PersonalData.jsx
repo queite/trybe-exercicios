@@ -31,6 +31,8 @@ class PersonalData extends React.Component {
             value={currentState.email}
           >   
           </input>
+          { !currentState.email.match(/^[a-z0-9]+@[a-z0-9]+\.[a-z]+/i)
+              ? ' -Insira um e-mail válido - ' : '' }
         </label>
 
         <label>CPF:

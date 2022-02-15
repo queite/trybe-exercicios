@@ -32,7 +32,6 @@ class App extends React.Component{
   handleChange({ target }) {
     let { name, value } = target;
     if (name === 'name') value = value.toUpperCase();
-
     this.setState({
       [name]: value
     });
@@ -45,10 +44,6 @@ class App extends React.Component{
   handleClear() {
     this.setState(startState);
   }
-
-  // validateEmail() {
-  //   const regex = /^[a-z0-9]+@[a-z0-9]+\.[a-z]+/i;
-  // }
 
   render() {
     const { submit } = this.state;
