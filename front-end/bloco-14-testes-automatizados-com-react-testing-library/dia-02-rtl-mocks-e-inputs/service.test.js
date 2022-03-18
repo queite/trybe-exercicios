@@ -36,7 +36,7 @@ it('testa implementação inicial da primeira função novamente', () => {
 })
 
 describe('Testa fetchDog', () => {
-  service.fetchDog = jest.fn();
+  // service.fetchDog = jest.fn();
 
   it('Promisse resolvida', async () => {
     service.fetchDog.mockResolvedValue('request sucess')
@@ -47,7 +47,7 @@ describe('Testa fetchDog', () => {
     await expect(service.fetchDog()).resolves.toBe('request sucess');
   });
 
-  it('Primisse rejeitada', async () => {
+  it('Promisse rejeitada', async () => {
     service.fetchDog.mockRejectedValue('request failed');
 
     expect(service.fetchDog).toHaveBeenCalledTimes(0);
