@@ -31,6 +31,7 @@
       <p>Color: <span id="value">white</span></p>
       <button id="previous">Previous color</button>
       <button id="next">Next color</button>
+      <button id="random">Random Color</button>
     </div>
 
     <script>
@@ -39,6 +40,15 @@
         index: 0,
       };
 
+      function criarCor() {
+        const oneChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+        let cor = '#';
+        const aleatorio = () => Math.floor(Math.random() * oneChar.length);
+        for (let i = 0; i < 6; i += 1) {
+            cor += oneChar[aleatorio()];
+        }
+        return cor;
+    }
 
       const reducer = (state = ESTADO_INICIAL, action) => {
         switch(action.type) {
@@ -52,6 +62,12 @@
               ...state,
               index: state.index === 0 ? state.colors.length -1 : state.index - 1
             };
+            case 'RANDOM_COLOR':
+              return {
+                ...state,
+                colors: [...state.colors, criarCor()],
+                index: state.colors.length,
+              }
  
           default:
             return state;
@@ -60,17 +76,25 @@
 
     const store = Redux.createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
+    // Envia a action para o reducer
     const nextButton = document.getElementById('next');
     nextButton.addEventListener('click', () => { // a função é o action
       store.dispatch({type: 'NEXT_COLOR'}) // objeto é o action
-    })
+    });
 
     const previousButton = document.getElementById('previous');
     previousButton.addEventListener('click', () => {
       store.dispatch({type: 'PREVIOUS_COLOR'})
+    });
+
+    const randomButton = document.getElementById('random');
+    randomButton.addEventListener('click', () => {
+      store.dispatch({type: 'RANDOM_COLOR'})
     })
 
-    //Dispara toda vez que o estado muda. Recebe uma função.
+
+
+    //Dispara toda vez que o estado muda. Recebe uma função. 
     store.subscribe(() => {
       const text = document.getElementById('value');
       const colorEl = document.getElementById('container');
@@ -78,6 +102,11 @@
       text.innerHTML = colors[index];
       colorEl.style.backgroundColor = colors[index];
     })
+
+    function colorRandom() {
+      let color = `(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`;
+      return color;
+    }
 
     </script>
 
