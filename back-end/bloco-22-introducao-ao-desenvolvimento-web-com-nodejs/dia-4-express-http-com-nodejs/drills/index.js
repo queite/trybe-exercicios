@@ -32,6 +32,19 @@ app.get('/drinks', function (req, res) {
   res.json(orderedDrinks);
 });
 
+app.get('/recipes/search', function (req, res) {
+	const { name, maxPrice } = req.query;
+  console.log(name);
+	const filteredRecipes = recipes.filter((r) => r.name.includes(name) && r.price < Number(maxPrice));
+	res.status(200).json(filteredRecipes);
+});
+
+app.get('/drinks/search', function(req, res) {
+  const {name} = req.query;
+  const filteredDrinks = drinks.filter((r) => r.name.includes(name));
+  res.status(200).json(filteredDrinks);
+});
+
 app.get('/recipes/:id', function (req, res) {
   const { id } = req.params;
   const recipe = recipes.find((r) => r.id === Number(id));
