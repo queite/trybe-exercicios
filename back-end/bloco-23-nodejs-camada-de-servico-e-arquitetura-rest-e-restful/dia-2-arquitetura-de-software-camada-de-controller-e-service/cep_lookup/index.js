@@ -20,4 +20,4 @@ app.post('/cep', Cep.createAddress);
 app.use(error);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Ouvindo cep_lookup`));
+app.listen(PORT, () => console.log(`Ouvindo ${process.env.DB_DATABASE}`));
