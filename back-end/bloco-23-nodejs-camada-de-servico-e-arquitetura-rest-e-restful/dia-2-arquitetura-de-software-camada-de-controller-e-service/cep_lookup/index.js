@@ -15,9 +15,7 @@ app.get('/ping', (_req, res) => {
 
 app.get('/cep/:cep', Cep.findAddressByCep);
 
-app.post('/cep', async (req, res) => {
-  const {cep, logradouro, bairro, localidade, uf} = req.body;
-});
+app.post('/cep', Cep.createAddress);
 
 app.use(error);
 
