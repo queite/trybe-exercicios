@@ -1,15 +1,22 @@
 const Cep = require('../models/Cep');
+const ViaCep = require('../models/ViaCep');
 
-const findByCep = async (cep) => {
-  if (!/\d{5}-?\d{3}/.test(cep)) return { error:
+// Retorna endereço se há cep ou erro se não há
+const findByCep = async (cepToSearch) => {
+  if (!/\d{5}-?\d{3}/.test(cepToSearch)) return { error: // Valida formato CEP
     { code: "invalidData", message: "CEP inválido" }
   };
+  const cepNumbers = cepToSearch.replace('-', ''); // Remove traço
 
-  const cepNumbers = cep.replace('-', '');
-  const adress = await Cep.getCEP(cepNumbers);
+  const address = await Cep.getCEP(cepNumbers); // Busca no banco de dados
+  if (address) return address;
 
-  if (!adress) return { error: { code: "notFound", message: "CEP não encontrado" } };
-  return adress;
+  const cepViaCep = await ViaCep.getAddresViaCep(cepNumbers);  // Busca na API se não retornar no banco de dados
+
+  if (cepViaCep.erro) return { error: { code: "notFound", message: "CEP não encontrado" } }; // Retorna erro se não houver cep. (Objeto retornado pela API qdo não há cep: { erro: 'true' })
+
+  const {cep, logradouro, bairro, localidade, uf} = cepViaCep;
+  return Cep.insertAdress(cep, logradouro, bairro, localidade, uf); // Insere dados no banco de dados e retorna os dados - função insertAdress do model dá o retorno
 }
 
 const createAddress = async (cep, logradouro, bairro, localidade, uf) => {
