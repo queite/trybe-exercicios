@@ -2,7 +2,7 @@
   "development": {
     "username": "queite",
     "password": "qsc2022",
-    "database": "books",
+    "database": "library",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

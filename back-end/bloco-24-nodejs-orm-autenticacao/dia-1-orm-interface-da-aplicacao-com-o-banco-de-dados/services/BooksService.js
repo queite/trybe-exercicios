@@ -1,9 +1,13 @@
 const {Book} = require("../models")
 
 const getAll = async () => {
-  const books = await Book.findAll();
+  try {
+    const books = await Book.findAll();
+    return books;
+  } catch(e) {
+    console.log(e);
+  }
 
-  return books;
 };
 
 const getById = async (id) => {
