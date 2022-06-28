@@ -1,4 +1,4 @@
-const Book = require("../models/Book")
+const {Book} = require("../models")
 
 const getAll = async () => {
   const books = await Book.findAll();
@@ -24,9 +24,18 @@ const update = async (id, {title, author, pageQuantity}) => {
   return updatedBook;
 };
 
+const remove = async (id) => {
+  const [removedBook] = await Book.destroy(
+    {where: {id}}
+    );
+  return removedBook;
+};
+
+
 module.exports = {
   getAll,
   getById,
   create,
   update,
+  remove
 }

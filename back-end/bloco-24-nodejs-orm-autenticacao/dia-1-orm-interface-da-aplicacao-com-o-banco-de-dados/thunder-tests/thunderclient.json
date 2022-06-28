@@ -1,0 +1,35 @@
+[
+  {
+    "_id": "9d1b1211-cb03-44b9-a8e5-aef1fbdf607f",
+    "colId": "0aa48c02-64a5-4a3c-b5a7-533c737f7725",
+    "containerId": "",
+    "name": "create",
+    "url": "localhost:3000/books",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-06-28T12:37:54.278Z",
+    "modified": "2022-06-28T12:40:38.846Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\": \"qualquer um\",\n    \"author\": \"esse aqui\",\n    \"pageQuantity\": 200\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "1e770487-e617-463f-acbf-486c478969a5",
+    "colId": "0aa48c02-64a5-4a3c-b5a7-533c737f7725",
+    "containerId": "",
+    "name": "books",
+    "url": "localhost:3000/books",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-06-28T12:51:39.106Z",
+    "modified": "2022-06-28T12:52:06.265Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
