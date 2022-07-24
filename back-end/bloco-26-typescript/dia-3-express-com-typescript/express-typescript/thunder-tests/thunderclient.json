@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "a1a6b2cd-3211-4cd4-99dd-3eb2e17251cc",
+    "colId": "cf5c7506-4a5d-4f88-b047-7f2a8bcc8a90",
+    "containerId": "",
+    "name": "{{localhost}}/users",
+    "url": "{{localhost}}/users",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-07-24T18:29:13.936Z",
+    "modified": "2022-07-24T18:29:13.936Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "2ece86d6-6b41-45eb-9a01-a32168645330",
+    "colId": "cf5c7506-4a5d-4f88-b047-7f2a8bcc8a90",
+    "containerId": "",
+    "name": "getById",
+    "url": "{{localhost}}/users/2",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-07-24T18:29:38.662Z",
+    "modified": "2022-07-24T18:33:11.014Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

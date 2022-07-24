@@ -1,0 +1,78 @@
+[
+  {
+    "_id": "3cc68c54-784d-4103-b113-8f480b8c8715",
+    "colId": "history",
+    "containerId": "",
+    "name": "{localhost}/users",
+    "url": "{localhost}/users",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-07-24T18:03:51.018Z",
+    "modified": "2022-07-24T18:22:10.976Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "localhost",
+        "value": "",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "1454a4ac-982e-4e4f-8a98-77c7f162e690",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/users",
+    "url": "localhost:3000/users",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-07-24T18:04:13.237Z",
+    "modified": "2022-07-24T18:21:26.697Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a0a132ce-da8c-495f-abbe-0a457cea5d82",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/",
+    "url": "localhost:3000/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-07-24T18:13:06.717Z",
+    "modified": "2022-07-24T18:13:06.734Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "29057b25-b23e-4e04-9cc4-762854e835d1",
+    "colId": "history",
+    "containerId": "",
+    "name": "{localhost/users",
+    "url": "{localhost/users",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-07-24T18:22:02.340Z",
+    "modified": "2022-07-24T18:22:02.355Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "bded3703-d25c-49f1-9440-85a70459b30d",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{localhost}}/users",
+    "url": "{{localhost}}/users",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-07-24T18:23:18.679Z",
+    "modified": "2022-07-24T18:24:22.688Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
