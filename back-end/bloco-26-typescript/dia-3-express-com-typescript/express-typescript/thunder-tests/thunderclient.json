@@ -18,13 +18,165 @@
     "colId": "cf5c7506-4a5d-4f88-b047-7f2a8bcc8a90",
     "containerId": "",
     "name": "getById",
-    "url": "{{localhost}}/users/2",
+    "url": "{{localhost}}/users/3",
     "method": "GET",
     "sortNum": 20000,
     "created": "2022-07-24T18:29:38.662Z",
-    "modified": "2022-07-24T18:33:11.014Z",
+    "modified": "2022-07-25T14:19:20.244Z",
     "headers": [],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "9de4e0a4-c61f-4b4a-8a04-5588e91976f9",
+    "colId": "cf5c7506-4a5d-4f88-b047-7f2a8bcc8a90",
+    "containerId": "",
+    "name": "create",
+    "url": "{{localhost}}/users",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-07-25T13:48:32.039Z",
+    "modified": "2022-07-25T13:50:20.753Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Elias Seinão\",\n    \"email\": \"teste@teste.com\",\n    \"password\": \"123456\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "92180345-5553-4818-bb00-91aa036dfa72",
+    "colId": "cf5c7506-4a5d-4f88-b047-7f2a8bcc8a90",
+    "containerId": "",
+    "name": "update",
+    "url": "{{localhost}}/users/3",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-07-25T14:18:12.461Z",
+    "modified": "2022-07-25T16:05:49.095Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"name\": \"Elias Coco\",\n    \"email\": \"teste@teste.com\",\n    \"password\": \"123456\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "6355e9f3-b721-4986-b1fa-5b5a439d9b0b",
+    "colId": "cf5c7506-4a5d-4f88-b047-7f2a8bcc8a90",
+    "containerId": "",
+    "name": "delete",
+    "url": "{{localhost}}/users/5",
+    "method": "DELETE",
+    "sortNum": 50000,
+    "created": "2022-07-25T16:08:31.361Z",
+    "modified": "2022-07-25T16:09:25.400Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ed79e504-cac9-49be-8ea1-a57dd722c977",
+    "colId": "e468003c-ccc4-4e38-8118-7e9960eecbbd",
+    "containerId": "",
+    "name": "get",
+    "url": "{{localhost}}/posts",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-07-26T17:54:02.888Z",
+    "modified": "2022-07-26T17:54:25.209Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "d02487fc-a3d2-4b27-8e1a-91979833f77a",
+    "colId": "e468003c-ccc4-4e38-8118-7e9960eecbbd",
+    "containerId": "",
+    "name": "getById",
+    "url": "{{localhost}}/posts/1",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-07-26T18:00:01.081Z",
+    "modified": "2022-07-26T18:00:11.279Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "eb42eb5f-3d6b-42bf-b963-49cbf245e03a",
+    "colId": "e468003c-ccc4-4e38-8118-7e9960eecbbd",
+    "containerId": "",
+    "name": "create",
+    "url": "{{localhost}}/posts",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-07-26T18:04:47.059Z",
+    "modified": "2022-07-26T19:13:58.627Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\": \"\",\n    \"author\": \"Fulano de tal\",\n    \"category\": \"qualquer\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "8728fb88-7589-4975-b023-1b3c71d14462",
+    "colId": "e468003c-ccc4-4e38-8118-7e9960eecbbd",
+    "containerId": "",
+    "name": "update",
+    "url": "{{localhost}}/posts/4",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-07-26T18:14:30.601Z",
+    "modified": "2022-07-26T18:15:20.406Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\": \"hj é legal\",\n    \"author\": \"Fulano de tal\",\n    \"category\": \"qualquer\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c856119b-d00a-4fee-9c72-09e49eea007f",
+    "colId": "e468003c-ccc4-4e38-8118-7e9960eecbbd",
+    "containerId": "",
+    "name": "delete",
+    "url": "{{localhost}}/posts/5",
+    "method": "DELETE",
+    "sortNum": 50000,
+    "created": "2022-07-26T18:16:19.783Z",
+    "modified": "2022-07-26T18:16:34.873Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8b523108-4790-4c82-b034-89907645df39",
+    "colId": "e468003c-ccc4-4e38-8118-7e9960eecbbd",
+    "containerId": "",
+    "name": "search",
+    "url": "{{localhost}}/posts/search?q=qualquer",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2022-07-26T18:49:29.291Z",
+    "modified": "2022-07-26T19:35:26.303Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "q",
+        "value": "qualquer",
+        "isPath": false
+      }
+    ],
     "tests": []
   }
 ]

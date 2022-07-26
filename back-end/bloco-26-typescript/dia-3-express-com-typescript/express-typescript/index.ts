@@ -1,9 +1,9 @@
-import express, {Request, Response} from 'express';
-import { StatusCodes } from 'http-status-codes';
+import express from 'express';
 import dotenv from "dotenv";
 import errMiddleware from './middleware/errMiddleware';
 import 'express-async-errors';
 import UserRoutes from './routes/user.routes';
+import PostRoutes from './routes/post.routes';
 
 dotenv.config();
 
@@ -14,6 +14,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 app.use('/users', UserRoutes);
+app.use('/posts', PostRoutes);
 
 app.use(errMiddleware);
 
