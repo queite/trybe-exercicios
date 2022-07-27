@@ -29,7 +29,7 @@ export default class PostService {
     return createdPost;
   }
 
-  async checkIfExist(id: number) {
+  async checkIfExist(id: number): Promise<void> {
     const PostId = await this.model.getById(id);
 
     if (!PostId) {
@@ -44,7 +44,7 @@ export default class PostService {
     await this.model.update({id, ...post});
   }
 
-  async delete(id: number) {
+  async delete(id: number): Promise<void> {
     await this.checkIfExist(id);
 
     await this.model.delete(id);
