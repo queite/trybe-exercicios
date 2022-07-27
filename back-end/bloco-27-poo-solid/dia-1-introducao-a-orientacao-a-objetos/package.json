@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "name": "dia-1-introducao-a-orientacao-a-objetos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "^18.6.1",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node ./dist/studentClass.js",
+    "dev": "ts-node studentClass.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
