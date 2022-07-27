@@ -13,7 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build && node ./dist/studentClass.js",
     "dev": "ts-node studentClass.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "snack": "ts-node snackBar.ts"
   },
   "keywords": [],
   "author": "",
