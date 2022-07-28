@@ -5,7 +5,7 @@ import { StatusCodes } from "http-status-codes";
 export default class PostController {
   constructor(private postService = new PostService ) {}
 
-  getAll = async (req: Request, res: Response) => { // Pq só funciona com arraw function?
+  getAll = async (req: Request, res: Response) => { // Pq só funciona com arraw function? Assum é uma propriedade
     const posts = await this.postService.getAll();
     res.status(StatusCodes.OK).json(posts);
   }

@@ -8,9 +8,10 @@ export default class PostModel {
     this.connection = connection;
   }
 
-  async getAll(): Promise<Post[]> {
+  async getAll(): Promise<Post[]> { // neste formato é um método
     const [rows] = await this.connection.execute('SELECT * FROM Posts');
     return rows as Post[]; // as = Type Assertions https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions
+    // Esse as é por causa do generic para tratar o retorno da lib do mysql2
   }
 
   async getById(id: number): Promise<Post> {
@@ -56,11 +57,3 @@ export default class PostModel {
     return result
   }
 }
-
-// const [result] = await this.connection.execute(
-//   `SELECT * FROM Posts
-//   WHERE author LIKE ?
-//   AND category LIKE ?
-//   AND publicationDate LIKE ?`,
-//   [`%${query}%`, `%${query}%`, `%${query}%`]
-//   );
