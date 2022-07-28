@@ -3,12 +3,17 @@ import { Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 
 export default class PostController {
-  constructor(private postService = new PostService ) {}
+  constructor(private postService = new PostService ) {} // segunda forma de fazer o mesmo do model e service
+  // ao usar as palavras public, private, etc... ele já faz as duas coisas (define e propriedade e inicializa)
 
-  getAll = async (req: Request, res: Response) => { // Pq só funciona com arraw function? Assum é uma propriedade
+  getAll = async (req: Request, res: Response) => { // Pq só funciona com arraw function? Assim é uma propriedade
     const posts = await this.postService.getAll();
     res.status(StatusCodes.OK).json(posts);
   }
+  // como método o express tenta executar na definição, não qdo vc chama na requisição e não aceita o this
+  // para funcionar é preciso chamar callback e parâmetros na rota:router.get('/', (req, res) => postController.getAll(req, res))
+  // ao criar propriedade o express consegue fazr o bind
+  // especificidade de algumas libs com estruturas mais robustas como express
 
   getById = async (req: Request, res: Response) => {
     const { id } = req.params;
