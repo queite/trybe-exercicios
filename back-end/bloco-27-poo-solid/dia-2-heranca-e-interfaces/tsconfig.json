@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",                              /* Specify what module code is generated. */
+    "outDir": "./dist",                                  /* Specify an output folder for all emitted files. */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+  }
+}
