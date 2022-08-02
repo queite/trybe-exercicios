@@ -1,36 +1,71 @@
-import Person from "./Person";
+import Evaluation from "./Evaluation";
+import EvaluationResult from "./EvaluationResult";
 import Student from "./Student";
-import Employee from "./interfaces/EmployeeInterface";
 import Subject from "./Subject";
 import Teacher from "./Teacher";
 
-//PERSON CLASS
-
-//STUDENT CLASS
-const carolina = new Student('Carolina da Silva', new Date('2005/03/17'));
-carolina.examsGrades = [25, 20, 25, 23];
-console.log('Student Class', carolina);
-
-// EMPLOYEE INTERFACE
-const testInterfaceEmployee: Employee = {
-  registration: 'FNC1234567891011',
-  salary: 1200.00,
-  admissionDate: new Date(),
-
-  generateRegistration(): string {
-    const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
-
-    return `FNC${randomStr}`;
-  },
-};
-console.log(testInterfaceEmployee);
-
-// SUBJECT CLASS
 const historia = new Subject('História');
 console.info(historia);
+//Subject { _name: 'História' }
 
-// TEACHER CLASS
-const JoaoTeacher = new Teacher('João Augusto', new Date('1980-5-26'), 3500, historia);
-console.info(JoaoTeacher);
-JoaoTeacher.admissionDate = new Date('2022-05-06');
-console.info(JoaoTeacher);
+const teacher1 = new Teacher('Alan', new Date('1980-12-05'), 3500, historia);
+console.info(teacher1);
+//Teacher {
+//   _name: 'Alan',
+//   _birthDate: 1980-12-05T00:00:00.000Z,
+//   _salary: 3500,
+//   _admissionDate: 2022-08-02T18:23:06.891Z,
+//   _enrollment: 'PRF20439132627201045',
+//   _subject: Subject { _name: 'História' }
+// }
+
+const student1 = new Student('João', new Date('1989-05-26'));
+console.log(student1);
+// Student {
+//   _name: 'João',
+//   _birthDate: 1989-05-26T00:00:00.000Z,
+//   _enrollment: 'STU19313760960548972',
+//   _evaluationsResults: []
+// }
+
+const avaliacao1 = new Evaluation(teacher1, 25, 'prova');
+console.info(avaliacao1);
+// Evaluation {
+//   _teacher: Teacher {
+//     _name: 'Alan',
+//     _birthDate: 1980-12-05T00:00:00.000Z,
+//     _salary: 3500,
+//     _admissionDate: 2022-08-02T18:23:06.891Z,
+//     _enrollment: 'PRF20439132627201045',
+//     _subject: Subject { _name: 'História' }
+//   },
+//   _grade: 25,
+//   _type: 'prova'
+// }
+
+const evaluationsResults1 = new EvaluationResult(avaliacao1, 18);
+console.info(evaluationsResults1);
+// EvaluationResult {
+//   _evaluation: Evaluation {
+//     _teacher: Teacher {
+//       _name: 'Alan',
+//       _birthDate: 1980-12-05T00:00:00.000Z,
+//       _salary: 3500,
+//       _admissionDate: 2022-08-02T18:23:06.891Z,
+//       _enrollment: 'PRF20439132627201045',
+//       _subject: [Subject]
+//     },
+//     _grade: 25,
+//     _type: 'prova'
+//   },
+//   _grade: 18
+// }
+
+student1.addEvaluationResult(evaluationsResults1);
+console.log(student1);
+// Student {
+//   _name: 'João',
+//   _birthDate: 1989-05-26T00:00:00.000Z,
+//   _enrollment: 'STU19313760960548972',
+//   _evaluationsResults: [ EvaluationResult { _evaluation: [Evaluation], _grade: 18 } ]
+// }

@@ -1,16 +1,15 @@
+import EvaluationResult from "./EvaluationResult";
 import Enrollment from "./interfaces/EnrollmentInterface";
 import Person from "./Person";
 
 export default class Student extends Person implements Enrollment{
-  private _examsGrades: number[];
-  private _worksGrades: number[];
+  private _evaluationsResults: EvaluationResult[];
   private _enrollment: string;
 
   constructor (name: string, birthDate: Date) {
     super(name, birthDate)
     this._enrollment = this.generateEnrollment();
-    this._examsGrades = [];
-    this._worksGrades = [];
+    this._evaluationsResults = [];
   }
 
   get enrollment(): string {
@@ -22,33 +21,17 @@ export default class Student extends Person implements Enrollment{
     this._enrollment = value;
   }
 
-  get examsGrades() {
-    return this._examsGrades;
+  get evaluationsResults(): EvaluationResult[] {
+    return this._evaluationsResults;
   }
 
-  set examsGrades(value: number[]) {
-    if (value.length > 4)throw new Error('São permitidas no máximo 4 notas de teste')
-    this._examsGrades = value;
-  }
-
-  get worksGrades() {
-    return this._worksGrades;
-  }
-
-  set worksGrades(value: number[]) {
-    if (value.length > 2)throw new Error('São permitidas no máximo 2 notas de trabalhos')
-    this._worksGrades = value;
-  }
-
-  gradeSum() {
-    const sum = (acc: number, curr: number) => acc += curr;
-    const grades = [...this._worksGrades, ...this._examsGrades];
-    return grades.reduce(sum);
-  }
+  sumGrades(): number {
+    return this._evaluationsResults // pq colocar um array e desetriturar e o original já é um array?
+      .reduce((previousNote, note) => note.grade + previousNote, 0);
+  } // com a forma que tinha feito antes dá um monte de erro de tipagem. Não entendo.
 
   gradeAverage() {
-    const divider = this._examsGrades.length + this._worksGrades.length;
-    return (this.gradeSum() / divider ).toFixed(2);
+    return (this.sumGrades() / this._evaluationsResults.length ).toFixed(2);
   }
 
   generateEnrollment(): string {
@@ -56,6 +39,10 @@ export default class Student extends Person implements Enrollment{
       .replace(/\W/g, '');
 
     return `STU${randomStr}`;
+  }
+
+  addEvaluationResult(value: EvaluationResult): void {
+    this._evaluationsResults.push(value);
   }
 }
 //Já os atributos criados com o modificador private só podem ser lidos e modificados dentro da classe. Isso significa que se você tentar utilizar a notação objeto.atributo do lado de fora das chaves que delimitam a criação da classe, você terá um erro do compilador.
