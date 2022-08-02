@@ -8,8 +8,8 @@ export default class Student extends Person implements Enrollment{
 
   constructor (name: string, birthDate: Date) {
     super(name, birthDate)
-    this._enrollment = this.generateEnrollment();
-    this._evaluationsResults = [];
+    this.enrollment = this.generateEnrollment();
+    this._evaluationsResults = []; //Não há setter. Muda diretamente no atributo. É modificada pelo método addEvaluationResult();
   }
 
   get enrollment(): string {
@@ -26,7 +26,7 @@ export default class Student extends Person implements Enrollment{
   }
 
   sumGrades(): number {
-    return this._evaluationsResults // pq colocar um array e desetriturar e o original já é um array?
+    return this._evaluationsResults
       .reduce((previousNote, note) => note.grade + previousNote, 0);
   } // com a forma que tinha feito antes dá um monte de erro de tipagem. Não entendo.
 

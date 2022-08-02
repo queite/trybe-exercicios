@@ -1,5 +1,6 @@
 import Evaluation from "./Evaluation";
 import EvaluationResult from "./EvaluationResult";
+import Exam from "./Exam";
 import Student from "./Student";
 import Subject from "./Subject";
 import Teacher from "./Teacher";
@@ -28,22 +29,21 @@ console.log(student1);
 //   _evaluationsResults: []
 // }
 
-const avaliacao1 = new Evaluation(teacher1, 25, 'prova');
-console.info(avaliacao1);
-// Evaluation {
+const exam1 = new Exam(teacher1, 25);
+console.info(exam1);
+// Exam {
 //   _teacher: Teacher {
 //     _name: 'Alan',
 //     _birthDate: 1980-12-05T00:00:00.000Z,
 //     _salary: 3500,
-//     _admissionDate: 2022-08-02T18:23:06.891Z,
-//     _enrollment: 'PRF20439132627201045',
+//     _admissionDate: 2022-08-02T18:42:11.447Z,
+//     _enrollment: 'PRF2605012487424112',
 //     _subject: Subject { _name: 'História' }
 //   },
-//   _grade: 25,
-//   _type: 'prova'
+//   _grade: 25
 // }
 
-const evaluationsResults1 = new EvaluationResult(avaliacao1, 18);
+const evaluationsResults1 = new EvaluationResult(exam1, 18); // como acessar a grade do objeto de Exam dentro desse objeto que recebe o objeto de exam?
 console.info(evaluationsResults1);
 // EvaluationResult {
 //   _evaluation: Evaluation {
