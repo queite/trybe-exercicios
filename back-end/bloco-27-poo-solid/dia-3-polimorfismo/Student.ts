@@ -1,13 +1,14 @@
+import Enrollment from "./interfaces/EnrollmentInterface";
 import Person from "./Person";
 
-export default class Student extends Person{
+export default class Student extends Person implements Enrollment{
   private _examsGrades: number[];
   private _worksGrades: number[];
   private _enrollment: string;
 
   constructor (name: string, birthDate: Date) {
     super(name, birthDate)
-    this._enrollment = Student.generateEnrollment();
+    this._enrollment = this.generateEnrollment();
     this._examsGrades = [];
     this._worksGrades = [];
   }
@@ -50,9 +51,11 @@ export default class Student extends Person{
     return (this.gradeSum() / divider ).toFixed(2);
   }
 
-  static generateEnrollment() {
-    const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
-    return randomStr;
+  generateEnrollment(): string {
+    const randomStr = String(Date.now() * (Math.random() + 1))
+      .replace(/\W/g, '');
+
+    return `STU${randomStr}`;
   }
 }
 //Já os atributos criados com o modificador private só podem ser lidos e modificados dentro da classe. Isso significa que se você tentar utilizar a notação objeto.atributo do lado de fora das chaves que delimitam a criação da classe, você terá um erro do compilador.

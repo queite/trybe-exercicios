@@ -1,13 +1,10 @@
 import Person from "./Person";
 import Student from "./Student";
 import Employee from "./interfaces/EmployeeInterface";
-import { generateKey } from "crypto";
 import Subject from "./Subject";
 import Teacher from "./Teacher";
 
 //PERSON CLASS
-const p1 = new Person('Lenira', new Date('1998-03-26'));
-console.info("Person Class", p1)
 
 //STUDENT CLASS
 const carolina = new Student('Carolina da Silva', new Date('2005/03/17'));
