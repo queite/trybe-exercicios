@@ -4,7 +4,7 @@ import Exam from "./Exam";
 export default class EvaluationResult {
   constructor(private _evaluation: Exam, private _grade: number) { // Evaluation é outra classe
 
-    this.evaluation = _evaluation;
+    this.evaluation = _evaluation; // recebe um objeto instanciado da classe Exam
     this.grade = _grade; // Se aqui chamo this._grade ele seta direto o valor sem passar pelo método set grade e os ifs não funcionam
   }
 

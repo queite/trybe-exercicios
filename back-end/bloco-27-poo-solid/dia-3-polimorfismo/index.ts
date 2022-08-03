@@ -4,13 +4,14 @@ import Exam from "./Exam";
 import Student from "./Student";
 import Subject from "./Subject";
 import Teacher from "./Teacher";
+import Work from "./Work";
 
 const historia = new Subject('História');
-console.info(historia);
+// console.info(historia);
 //Subject { _name: 'História' }
 
 const teacher1 = new Teacher('Alan', new Date('1980-12-05'), 3500, historia);
-console.info(teacher1);
+// console.info(teacher1);
 //Teacher {
 //   _name: 'Alan',
 //   _birthDate: 1980-12-05T00:00:00.000Z,
@@ -21,7 +22,7 @@ console.info(teacher1);
 // }
 
 const student1 = new Student('João', new Date('1989-05-26'));
-console.log(student1);
+// console.log(student1);
 // Student {
 //   _name: 'João',
 //   _birthDate: 1989-05-26T00:00:00.000Z,
@@ -30,8 +31,6 @@ console.log(student1);
 // }
 
 const exam1 = new Exam(teacher1, 25); // até aqui funciona apesar de o que está dando problema no acesso de grade em EvaluationResult é o getter grade daqui
-console.info("olha", exam1.grade);
-console.info("olha", exam1.teacher);
 // Exam {
 //   _teacher: Teacher {
 //     _name: 'Alan',
@@ -43,6 +42,11 @@ console.info("olha", exam1.teacher);
 //   },
 //   _grade: 25
 // }
+
+const work1 = new Work(teacher1, 50);
+console.log('work', work1.grade);
+const evaluationsResults2 = new EvaluationResult(work1, 30)
+console.log(evaluationsResults2);
 
 const evaluationsResults1 = new EvaluationResult(exam1, 18); // como acessar a grade do objeto de Exam dentro desse objeto que recebe o objeto de exam?
 console.info(evaluationsResults1);
