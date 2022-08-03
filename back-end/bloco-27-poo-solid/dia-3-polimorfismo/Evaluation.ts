@@ -11,7 +11,7 @@ export default abstract class Evaluation {
 
   set teacher(teacher: Teacher) { this._teacher = teacher };
 
-  get grade(): number { return this._grade};
+  get grade(): number { return this._grade };
 
   set grade(value: number) {
     if (value < 0) throw new Error('Nota deve ser positiva');

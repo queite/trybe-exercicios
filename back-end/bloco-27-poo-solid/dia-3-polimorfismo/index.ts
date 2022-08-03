@@ -29,8 +29,9 @@ console.log(student1);
 //   _evaluationsResults: []
 // }
 
-const exam1 = new Exam(teacher1, 25);
-console.info(exam1);
+const exam1 = new Exam(teacher1, 25); // até aqui funciona apesar de o que está dando problema no acesso de grade em EvaluationResult é o getter grade daqui
+console.info("olha", exam1.grade);
+console.info("olha", exam1.teacher);
 // Exam {
 //   _teacher: Teacher {
 //     _name: 'Alan',
