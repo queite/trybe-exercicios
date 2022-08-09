@@ -44,12 +44,12 @@ const exam1 = new Exam(teacher1, 25); // até aqui funciona apesar de o que est�
 // }
 
 const work1 = new Work(teacher1, 50);
-console.log('work', work1.grade);
+// console.log('work', work1.grade);
 const evaluationsResults2 = new EvaluationResult(work1, 30)
-console.log(evaluationsResults2);
+// console.log(evaluationsResults2.grade);
 
-const evaluationsResults1 = new EvaluationResult(exam1, 18); // como acessar a grade do objeto de Exam dentro desse objeto que recebe o objeto de exam?
-console.info(evaluationsResults1);
+const evaluationsResults1 = new EvaluationResult(exam1, 20); // como acessar a grade do objeto de Exam dentro desse objeto que recebe o objeto de exam?
+// console.info(evaluationsResults1);
 // EvaluationResult {
 //   _evaluation: Evaluation {
 //     _teacher: Teacher {
@@ -67,7 +67,7 @@ console.info(evaluationsResults1);
 // }
 
 student1.addEvaluationResult(evaluationsResults1);
-console.log(student1);
+// console.log(student1);
 // Student {
 //   _name: 'João',
 //   _birthDate: 1989-05-26T00:00:00.000Z,

@@ -16,7 +16,7 @@ export default class EvaluationResult {
 
   set grade(value: number) {
     console.info('ESTE this.evaluation.grade', this.evaluation.grade); // como acessar a grade do objeto de Exam dentro desse objeto que recebe o objeto de exam?
-    console.log('ESTE this.evaluation', this.evaluation);
+    // console.log('ESTE this.evaluation', this.evaluation);
     if (value > this.evaluation.grade) throw new Error('Nota não deve ser maior que avaliação');
     if (value < 0) throw new Error('Avaliação não pode ser negativa');
     this._grade = value;

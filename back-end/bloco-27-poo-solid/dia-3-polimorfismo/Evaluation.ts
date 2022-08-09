@@ -1,6 +1,6 @@
 import Teacher from "./Teacher"
 
-export default abstract class Evaluation {
+export default class Evaluation {
   constructor(private _teacher: Teacher, private _grade: number) {
 
     this.teacher = _teacher;
@@ -14,6 +14,7 @@ export default abstract class Evaluation {
   get grade(): number { return this._grade };
 
   set grade(value: number) {
+    console.log('entrou do setter da superclasse')
     if (value < 0) throw new Error('Nota deve ser positiva');
     this._grade = value
   }
