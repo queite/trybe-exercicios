@@ -7,9 +7,11 @@ class Carta:
         self.naipe = naipe
 
     def __repr__(self):
-        return '<%s de %s>' % (self.valor, self.naipe)
+        return "<%s de %s>" % (self.valor, self.naipe)
         # https://pyformat.info/#simple
-'''
+
+
+"""
 O __str__ serve para exibir o objeto para usuário final, usada pelo comando print e pela função str
 O __repr__ serve para exibir o objeto para o programador, usada pelo console do Python e pela funçao repr.
 Ex.:
@@ -19,10 +21,14 @@ str(today)
 '2012-03-14 09:21:58.130922'
 repr(today)
 'datetime.datetime(2012, 3, 14, 9, 21, 58, 130922)'
-''' # noqa
+"""  # noqa
 
 # __iter__ = estado que armazena a posição
-class IteradorDoBaralho(Iterator):  # Iterator introduz o dunder/magic method __iter__ na classe # noqa
+
+
+class IteradorDoBaralho(
+    Iterator
+):  # Iterator introduz o dunder/magic method __iter__ na classe # noqa
     def __init__(self, cartas):
         self._cartas = cartas
         self._index = 0  # estado que armazena a posição
@@ -41,8 +47,8 @@ class IteradorDoBaralho(Iterator):  # Iterator introduz o dunder/magic method __
 
 
 class Baralho(Iterable):
-    naipes = 'copas ouros espadas paus'.split()
-    valores = 'A 2 3 4 5 6 7 8 9 10 J Q K'.split()
+    naipes = "copas ouros espadas paus".split()
+    valores = "A 2 3 4 5 6 7 8 9 10 J Q K".split()
 
     def __init__(self):
         self._cartas = [
@@ -58,7 +64,7 @@ class Baralho(Iterable):
         return IteradorDoBaralho(self._cartas)
 
     def __str__(self):
-        return f'{self._cartas}'
+        return f"{self._cartas}"
 
 
 # baralho = Baralho()
