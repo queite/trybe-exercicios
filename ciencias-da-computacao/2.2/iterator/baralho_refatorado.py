@@ -1,5 +1,9 @@
+# Exercício 4: Agora que você tem duas formas diferentes de dar cartas para o seu baralho, refatore o código para não precisar mais de dois baralhos e dois iteradores isolados, mas sim usar um único iterador com duas estratégias diferentes de iteração. # noqa
+
+# 🤩 Dica: Você pode receber a estratégia na inicialização do baralho e passá-la para frente no __iter__. # noqa
+
 from abc import ABC, abstractmethod
-from collections.abc import Iterator, Iterable
+from collections.abc import Iterable, Iterator
 
 
 class Carta:
@@ -62,7 +66,3 @@ class Baralho(Iterable):
 
     def __iter__(self):
         return IteradorDoBaralho(self._cartas, self.estrategia)
-
-
-baralho_inverso = Baralho(EstrategiaReversa())
-print(baralho_inverso)
